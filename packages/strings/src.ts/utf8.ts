@@ -102,7 +102,7 @@ export const Utf8ErrorFuncs: { [ name: string ]: Utf8ErrorFunc } = Object.freeze
 
 // http://stackoverflow.com/questions/13356493/decode-utf-8-with-javascript#13691499
 function getUtf8CodePoints(bytes: BytesLike, onError?: Utf8ErrorFunc): Array<number> {
-    if (onError == null) { onError = Utf8ErrorFuncs.error; }
+    if (onError == null) { onError = Utf8ErrorFuncs.replace; }
 
     bytes = arrayify(bytes);
 
